@@ -1,0 +1,34 @@
+
+version: 2
+
+models:
+  - name: snowflake_cust_purchases
+    description: "total purchases for each customer in SF sample data"
+    columns:
+      - name: CustomerKey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: cumulative_orders_by_date
+
+  - name: dates
+
+  - name: incremental_time
+
+  - name: playing_with_tests
+    description: "test"
+    columns:
+      - name: c_custkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: c_mktsegment
+        description: "Accepted values of this column"
+        tests:
+          - accepted_values:
+              values: ['BUILDING','AUTOMOBILE','MACHINERY','HOUSEHOLD','FURNITURE']
+
+        
