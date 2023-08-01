@@ -4,7 +4,7 @@
 
 {{ dbt_utils.date_spine(
     datepart= "day",
-    start_date="to_date'(01/01/2016', 'mm/dd/yyyy')",
+    start_date="dateadd(week, 1, '01/01/2016')",
     end_date="dateadd(week, 1, current_date)"
     )
 }}
