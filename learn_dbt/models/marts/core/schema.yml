@@ -1,4 +1,30 @@
-version: 2 
+version: 2
+
+models:
+  - name: int_orders__pivoted
+    description: TBD
+    columns: 
+      - name: order_id
+        description: TBD
+        tests:
+          - unique
+          - not_null
+  - name: dim_customers
+    description: TBD
+    columns: 
+      - name: customer_id
+        description: TBD
+        tests:
+          - unique
+          - not_null
+  - name: fct_orders
+    description: TBD
+    columns: 
+      - name: order_id
+        description: TBD
+        tests:
+          - unique
+          - not_null
 
 sources:
   - name: stripe
