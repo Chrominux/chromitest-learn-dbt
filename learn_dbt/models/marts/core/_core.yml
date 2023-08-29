@@ -18,15 +18,16 @@ models:
           - unique
           - not_null
 
+  - name: orders_by_date
+    description: periodic snapshot showing orders and dollars placed on each day
+    columns:
+      - name: date_day
+        description: Primary key for table
+        tests:
+          - unique
+          - not_null
+
 sources:
-  - name: stripe
-    database: raw
-    schema: stripe
-    tables:
-      - name: payment
-        loaded_at_field: _batched_at
-        freshness:
-          warn_after: {count: 12, period: hour}
 
   - name: jaffle_shop
     description: A clone of a Postgres application database.

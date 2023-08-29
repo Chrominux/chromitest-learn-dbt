@@ -56,11 +56,3 @@ models:
           # this test should fail, use `dbt test -s orders --store-failures` to find results
           - unique
 
-  - name: orders_by_date
-    description: periodic snapshot showing orders and dollars placed on each day
-    columns:
-      - name: date_day
-        description: Primary key for table
-        tests:
-          - unique
-          - not_null
